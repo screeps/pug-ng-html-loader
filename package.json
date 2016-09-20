@@ -1,7 +1,7 @@
 {
   "name": "pug-html-loader",
-  "version": "1.0.9",
-  "description": "Pug to html loader for webpack",
+  "version": "1.0.10",
+  "description": "Pug to html loader for webpack, close to HTML and friendly with Angular 2",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
