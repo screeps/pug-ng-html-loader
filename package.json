@@ -1,5 +1,5 @@
 {
-  "name": "pug-html-loader",
+  "name": "pug-ng-html-loader",
   "version": "1.0.10",
   "description": "Pug to html loader for webpack, close to HTML and friendly with Angular 2",
   "main": "lib/index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/willyelm/pug-html-loader.git"
+    "url": "https://github.com/tycho01/pug-ng-html-loader.git"
   },
   "bugs": {
-    "url": "https://github.com/willyelm/pug-html-loader/issues"
+    "url": "https://github.com/tycho01/pug-ng-html-loader/issues"
   },
-  "homepage": "https://github.com/willyelm/pug-html-loader",
+  "homepage": "https://github.com/tycho01/pug-ng-html-loader",
   "keywords": [
     "html",
     "pug",
