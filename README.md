@@ -1,36 +1,49 @@
-# Pug HTML loader for webpack
+# Pug Angular 2 HTML loader for webpack
+
+This enables using [`pug-plugin-ng`](https://github.com/tycho01/pug-plugin-ng) through Webpack, see that repo for details. In short, this allows writing Pug as close to HTML as possible, making it terser and facilitating conversion between Pug and HTML. This is particularly desirable when using Angular 2, because its different non-standard uses of HTML attributes required workarounds polluting Pug with additional brackets/commas and `=''`.
+
+## Why not just use [`pug-html-loader`](https://github.com/willyelm/pug-html-loader)?
+
+Because you cannot pass `pug-plugin-ng` into its options; Webpack query JSON serialization kills functions, see [here](https://github.com/pugjs/pug-lexer/pull/69#issuecomment-241119765).
 
 ## Installation
 
-`npm install pug-html-loader`
+```
+npm i --saveDev pug-ng-html-loader@github:tycho01/pug-ng-html-loader
+// future:
+npm i --saveDev pug-ng-html-loader
+```
 
 ## Usage
 
-In your sources:
-
-``` javascript
-var html = require('./file.pug')
-// => returns file.pug content as html compiled string
+`myComp.pug`:
+```
+.items(
+  *ngFor="#item of items"
+  [ngClass]="{'active': isActive}"
+)
+  p {{item}}
 ```
 
-In your webpack.config.js  file:
+`myComp.ts`:
+```
+@Component({
+  template: require('./myComp.pug'),
+})
+```
 
-```javascript
+In your `webpack.config.js` file, using `pug-ng-html-loader`:
+```
 module.exports = {
   // your config settings ...
   module: [
-    // your modules...
-    loaders: [{
-      include: /\.pug/,
-      // pass options to pug as a query ('pug-html-loader?pretty')
-      loader: 'pug-html-loader'
-    }]
+    //your modules...
+    loaders: [
+      { test: /\.pug$/, loader: 'pug-ng-html' },
+    ]
   ]
 };
 ```
-
-Don't forget to polyfill `require` if you want to use it in node.
-See `webpack` documentation.
 
 ## License
 
