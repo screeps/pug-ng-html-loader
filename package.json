@@ -15,12 +15,14 @@
   },
   "homepage": "https://github.com/tycho01/pug-ng-html-loader",
   "keywords": [
-    "html",
-    "pug",
-    "loader",
     "webpack",
-    "compile",
-    "plain"
+    "loader",
+    "pug",
+    "jade",
+    "html",
+    "ng2",
+    "angular2",
+    "angular"
   ],
   "author": "Williams Medina <williams.medinaa@gmail.com>",
   "license": "MIT",

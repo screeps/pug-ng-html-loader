@@ -9,8 +9,6 @@ Because you cannot pass `pug-plugin-ng` into its options; Webpack query JSON ser
 ## Installation
 
 ```
-npm i --saveDev pug-ng-html-loader@github:tycho01/pug-ng-html-loader
-// future:
 npm i --saveDev pug-ng-html-loader
 ```
 
