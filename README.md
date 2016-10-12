@@ -1,3 +1,5 @@
+### Note: for webpack 2, just use `pug-plugin-ng` directly with `pug-html-loader`. This repo has no more use there.
+
 # Pug Angular 2 HTML loader for webpack
 
 This enables using [`pug-plugin-ng`](https://github.com/tycho01/pug-plugin-ng) through Webpack, see that repo for details. In short, this allows writing Pug as close to HTML as possible, making it terser and facilitating conversion between Pug and HTML. This is particularly desirable when using Angular 2, because its different non-standard uses of HTML attributes required workarounds polluting Pug with additional brackets/commas and `=''`.
